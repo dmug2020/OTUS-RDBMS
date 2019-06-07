@@ -1,0 +1,90 @@
+<html><head><style>TD,TH{padding:3px;border:1px solid #000;}TH{text-align: left; border: 1px solid #000;}</style></head><body><h1 id="d1_doc_gen_contents">Contents</h1>
+
+<ul><li><a href="#comments"><b>comments</b></a></li>
+<li><a href="#posts"><b>posts</b></a></li>
+<li><a href="#users"><b>users</b></a></li>
+</ul><h1>Tables</h1>
+
+<h2 id="comments"> Table: <code>comments</code></h2>
+
+<h3>Description:</h3>
+
+<p></p>
+
+<h3>Columns:</h3>
+
+<table><thead><tr class="header"><th align="left">Column</th><th align="left">Data type</th><th align="left">Attribute</th><th align="left">Defualt</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td><code>comment_ID</code></td><td>BIGINT</td><td>PRIMARY, AUTO INCREMENTS, NOT NULL</td><td> </td><td>счетчик - первичный ключ<br /></td></tr>
+<tr><td><code>comment_author</code></td><td>TINYTEXT</td><td>NOT NULL</td><td> </td><td>автор коммента</td></tr>
+<tr><td><code>comment_date</code></td><td>DATETIME</td><td>NOT NULL</td><td><code>'0000-00-00 00:00:00'</code></td><td>дата коммента</td></tr>
+<tr><td><code>comment_content</code></td><td>TEXT</td><td>NOT NULL</td><td> </td><td>текст комментария</td></tr>
+<tr><td><code>user_id</code></td><td>BIGINT</td><td>NOT NULL</td><td><code>'0'</code></td><td>внешний ключ<br /><br />FK in column <code>ID</code> in table <a href="#users"><code>users</code></a>.</td></tr>
+</tbody></table>
+
+<h3>Indexes:</h3>
+
+<table><thead><tr class="header"><th align="left">Name</th><th align="left">Columns</th><th align="left">Data type</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td>PRIMARY</td><td><code>comment_ID</code></td><td>PRIMARY</td><td> </td></tr>
+<tr><td>user_id_idx</td><td><code>user_id</code></td><td>INDEX</td><td> </td></tr>
+</tbody></table><a href="#d1_doc_gen_contents">To contents</a>
+
+<h2 id="posts"> Table: <code>posts</code></h2>
+
+<h3>Description:</h3>
+
+<p></p>
+
+<h3>Columns:</h3>
+
+<table><thead><tr class="header"><th align="left">Column</th><th align="left">Data type</th><th align="left">Attribute</th><th align="left">Defualt</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td><code>ID</code></td><td>BIGINT</td><td>PRIMARY, NOT NULL</td><td> </td><td>счетчик,первичный ключ</td></tr>
+<tr><td><code>post_author</code></td><td>BIGINT</td><td>NOT NULL</td><td><code>'0'</code></td><td>внешний ключ<br /><br />FK in column <code>ID</code> in table <a href="#users"><code>users</code></a>.</td></tr>
+<tr><td><code>post_date</code></td><td>DATETIME</td><td>NOT NULL</td><td><code>'0000-00-00 00:00:00'</code></td><td>дата публикации поста</td></tr>
+<tr><td><code>post_content</code></td><td>LONGTEXT</td><td>NOT NULL</td><td> </td><td>'тело поста'</td></tr>
+<tr><td><code>post_title</code></td><td>VARCHAR(45)</td><td>NOT NULL</td><td> </td><td>'загловок поста'</td></tr>
+<tr><td><code>post_modified</code></td><td>DATETIME</td><td>NOT NULL</td><td><code>'0000-00-00 00:00:00'</code></td><td>дата изменения поста</td></tr>
+<tr><td><code>comment_count</code></td><td>BIGINT</td><td>NOT NULL</td><td><code>'0'</code></td><td>счет комментариев - увеличивается на 1 при каждом комменте к посту</td></tr>
+<tr><td><code>likes</code></td><td>INT</td><td>NOT NULL</td><td><code>0</code></td><td>кол-во лайков к посту - увеличивается на один каждый раз</td></tr>
+<tr><td><code>link_image</code></td><td>VARCHAR(255)</td><td>NOT NULL</td><td> </td><td>это сслыка на изображение в посте</td></tr>
+</tbody></table>
+
+<h3>Indexes:</h3>
+
+<table><thead><tr class="header"><th align="left">Name</th><th align="left">Columns</th><th align="left">Data type</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td>PRIMARY</td><td><code>ID</code></td><td>PRIMARY</td><td> </td></tr>
+<tr><td>type_status_date</td><td><code>post_date</code>, <code>ID</code></td><td>INDEX</td><td> </td></tr>
+<tr><td>post_author</td><td><code>post_author</code></td><td>INDEX</td><td> </td></tr>
+</tbody></table><a href="#d1_doc_gen_contents">To contents</a>
+
+<h2 id="users"> Table: <code>users</code></h2>
+
+<h3>Description:</h3>
+
+<p></p>
+
+<h3>Columns:</h3>
+
+<table><thead><tr class="header"><th align="left">Column</th><th align="left">Data type</th><th align="left">Attribute</th><th align="left">Defualt</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td><code>ID</code></td><td>BIGINT</td><td>PRIMARY, AUTO INCREMENTS, NOT NULL</td><td> </td><td>счетчик - певрвичный ключ</td></tr>
+<tr><td><code>user_login</code></td><td>VARCHAR(60)</td><td>NOT NULL</td><td><code>''</code></td><td>логин пользователя</td></tr>
+<tr><td><code>user_pass</code></td><td>VARCHAR(255)</td><td>NOT NULL</td><td><code>''</code></td><td>пароль пользователя</td></tr>
+<tr><td><code>user_email</code></td><td>VARCHAR(100)</td><td>NOT NULL</td><td><code>''</code></td><td>EMAIL</td></tr>
+<tr><td><code>user_status</code></td><td>INT</td><td>NOT NULL</td><td><code>'0'</code></td><td>статус пользователя - на подобие статуса вконтакте - мини текст о себе</td></tr>
+<tr><td><code>display_name</code></td><td>VARCHAR(250)</td><td>NOT NULL</td><td><code>''</code></td><td>выводимое имя видное для остальных - может отличаться от login</td></tr>
+</tbody></table>
+
+<h3>Indexes:</h3>
+
+<table><thead><tr class="header"><th align="left">Name</th><th align="left">Columns</th><th align="left">Data type</th><th align="left">Description</th></tr></thead><tbody>
+
+<tr><td>PRIMARY</td><td><code>ID</code></td><td>PRIMARY</td><td> </td></tr>
+<tr><td>user_login_key</td><td><code>user_login</code></td><td>INDEX</td><td> </td></tr>
+<tr><td>user_email</td><td><code>user_email</code></td><td>INDEX</td><td> </td></tr>
+</tbody></table><a href="#d1_doc_gen_contents">To contents</a>
+
+</body></html>
