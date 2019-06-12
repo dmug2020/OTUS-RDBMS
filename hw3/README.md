@@ -20,9 +20,13 @@ HW 3
 - исключить возможность того что несколько пользователей редактируют заголовок поста и текст поста одновременно
 
 SQL 
+
 start transaction;
+
 select post_title from posts where post_title='some title' limit 1 for update;
+
 UPDATE posts SET post_title = 'new title',post_content='some new text';
+
 commit;
 
 
