@@ -30,5 +30,8 @@ UPDATE posts SET post_title = 'new title',post_content='some new text';
 commit;
 
 
+Также стоит заметить, что использование FOR UPDATE лучше делать с выключенным autocommit-ом, так как вне зависимости от того, что вы залочили, после первого апдейта лок снимется.
 
-
+mysql> SET autocommit=0;
+ 
+ 
