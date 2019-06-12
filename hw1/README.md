@@ -54,6 +54,7 @@ updated_at
 
 4)Datetime изменил на Timestamp -при получении из базы отображается с учётом часового пояса
 
+https://github.com/ugaidmitry/RDBMS/blob/master/hw1/pic/blogmodifyed1.pdf
 
 
 
