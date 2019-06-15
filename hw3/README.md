@@ -33,5 +33,27 @@ commit;
 Также стоит заметить, что использование FOR UPDATE лучше делать с выключенным autocommit-ом, так как вне зависимости от того, что вы залочили, после первого апдейта лок снимется.
 
 mysql> SET autocommit=0;
+
+
+На основании комментария 
+Добавляем комментарий + обновляем кол-во комментариев (post_comments) в таблице post_statistic
+SQL 
+
+start transaction;
+INSERT into comment (comment_author, comment_content, created_at) VALUES(@AUTHOR, @COMMENT, NOW());
+UPDATE post_statistic set post_comments=post_comments+1;
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
  
  
