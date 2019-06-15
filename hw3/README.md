@@ -36,6 +36,7 @@ mysql> SET autocommit=0;
 
 
 На основании комментария 
+
 Добавляем комментарий + обновляем кол-во комментариев (post_comments) в таблице post_statistic
 SQL 
 
