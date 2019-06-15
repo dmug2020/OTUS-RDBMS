@@ -40,8 +40,11 @@ mysql> SET autocommit=0;
 SQL 
 
 start transaction;
+
 INSERT into comment (comment_author, comment_content, created_at) VALUES(@AUTHOR, @COMMENT, NOW());
+
 UPDATE post_statistic set post_comments=post_comments+1;
+
 commit;
 
 
