@@ -40,7 +40,7 @@ selectivity _ factor = \frac {1}{Cardinality}
 3. Создаем дополнительные индексы - простые или композитные. 
 Полезная статья https://ruhighload.com/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B+%D0%B2+mysql 
 
-3.1 Индекс user_login ставим UNIQUE
+3.1 Индекс display_name ставим UNIQUE  - по нику автора часто ищут в блогах
 
 3.2 Ставим индекс на FULLTEXT на post_content,post_title ,comment_content - для ускорения полнотекстового поиска
 
@@ -63,6 +63,14 @@ selectivity _ factor = \frac {1}{Cardinality}
 
 Ничего не моу придумать на какое поле поставить CHECK 
 
+
+Модель БД (убрал таблицу POST_STATISTC),добавил колонки из таблицы в таблицу POSTS.Это удобнее при запросах по кол-ву лайков,репостов или комментах можно сразу вывести суммарно по всем постам.При 2х таблицах POSTS и POST_STATISTC пришлось бы делать JOIN'Ы.
+
+https://github.com/ugaidmitry/RDBMS/blob/master/hw4/pic/blogmodifyed2.pdf
+
+Документация
+
+https://github.com/ugaidmitry/RDBMS/blob/master/hw4/pic/documentation.pdf
 
 
 
