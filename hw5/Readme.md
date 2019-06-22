@@ -1,5 +1,11 @@
 HW5
 
+https://github.com/ugaidmitry/RDBMS/blob/master/hw4/pic/blogmodifyed2.pdf
+
+https://github.com/ugaidmitry/RDBMS/blob/master/hw4/pic/documentation.pdf
+
+
+
 Стартап:
 Блог : EPICROMANS.RU посвящен молодым литераторам которые пишут адово длинные романы
 
