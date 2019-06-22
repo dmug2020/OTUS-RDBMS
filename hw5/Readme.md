@@ -57,4 +57,5 @@ SYSTEM zfs snapshot -r data/mysql@today; \
 8
 UNLOCK TABLES; START SLAVE;'
 
+В качестве архитектуры бэкапа выбрал бэкап через снепшоты zfs,а не mysqldump так как база будет расти а дампов восстанавливать по времени досточно затратно
 
