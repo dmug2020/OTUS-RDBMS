@@ -23,10 +23,10 @@ WHERE
     `src`.`post_likes`  > 100;
 	
 
--- ќбновление данных
+-- обновление данных
 update posts set post_title='роман о лимонаде' where post_comments=1;
 
--- обновл¤ем таблицу POSTS,значение записи Post_likes присваеваем всем постам = 1000 где никнейм автора = supernikname
+-- обновляем таблицу POSTS,значение записи Post_likes присваеваем всем постам = 1000 где никнейм автора = supernikname
 update `posts` as p
   join users u on p.user_id = u.user_id 
   set p.post_likes=1000
@@ -34,15 +34,15 @@ update `posts` as p
 
  
   
--- ”даление
+-- удаление
 delete from photos where created_at BETWEEN '2019-03-02|09:02:20' AND '2019-03-02|09:02:40'
 
--- ¬ставка и обновление
+-- вставка и обновление
 insert into posts (post_title, post_contents)
   values ('это загловок', 'длинный текст') on duplicate key update post_id=post_id+1;
 
 
--- ќчистка данных
+-- очистка данных
 
 delete from posts;
 delete from photos;
