@@ -8,7 +8,8 @@ insert into posts (post_title, post_content)
 insert into posts (post_title, post_content)
   values ('роман о водке ', 'длинный при длинный текст о водке');
 
--- вставка с использованием select (во временную таблицу вставл¤ем статистику по лайкам,прочтениям,репостам,комментари¤м где статистика по лайкам > 100)
+-- вставка с использованием select (во временную таблицу вставл¤ем статистику по лайкам,прочтениям,репостам,комментари¤м
+где статистика по лайкам > 100)
 
 INSERT INTO
     `temp_statistic` (`post_likes`,`post_reads`,`post_repost`,`post_comments`)
