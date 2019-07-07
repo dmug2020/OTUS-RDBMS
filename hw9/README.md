@@ -30,3 +30,6 @@ command line: mysql -uroot -p -h 0.0.0.0 -P <your_free_port>
 Сделано:
 
 * для учебной базы сделать скрипт для партиционирования таблицы CDR по месяцам (на выходе SQL  скрипт на модерацию + дамп измененной структуры)
+https://github.com/ugaidmitry/RDBMS/blob/master/hw9/partitioning.PNG
+https://github.com/ugaidmitry/RDBMS/blob/master/hw9/partitioning_1.PNG
+https://github.com/ugaidmitry/RDBMS/blob/master/hw9/part.sql
