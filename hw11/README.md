@@ -26,7 +26,9 @@ port: 3306
 command line: mysql -uroot -p -h 0.0.0.0 -P <your_free_port>
 
 
-1.Скрипт наполнения базы https://github.com/ugaidmitry/RDBMS/blob/master/hw11/scriptaero.sql
+1.Скрипт наполнения базы https://github.com/ugaidmitry/RDBMS/blob/master/hw11/scriptaero.sql 
+
+Схема БД: https://github.com/ugaidmitry/RDBMS/blob/master/hw11/aero%20diag.PNG
 
 2.Скрипт выборки https://github.com/ugaidmitry/RDBMS/blob/master/hw11/select.sql 
 
