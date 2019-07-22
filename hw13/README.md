@@ -20,9 +20,13 @@ HW13
 4. Посчитайте платежи в системе в разрезе год (строка) - месяц (колонка), на пересечении должна быть сумма платежей за этот год и месяц.
 
 
-Решение
-1)
-2)
-3)
+Решение:
+
+1)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/1.sql
+
+2)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/2.sql
+
+3)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/3.sql
+
 
  
