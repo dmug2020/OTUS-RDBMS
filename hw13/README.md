@@ -22,11 +22,5 @@ HW13
 
 Решение:
 
-1)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/1.sql
-
-2)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/2.sql
-
-3)https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/3.sql
-
-
+https://github.com/ugaidmitry/RDBMS/blob/master/hw13/sql/full.sql
  
