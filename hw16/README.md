@@ -15,7 +15,11 @@ and td.tch_mod_id=pm.mod_id
 
 Задача - сделать полнотекстовый индекс, который ищет по свойствам, названию товара и названию модели
 
-2) добавляем индексы в свой проект
+Решение - https://github.com/ugaidmitry/RDBMS/blob/master/hw16/sql/fulltext.sql
 
-реализовал 
-1)
+
+2) добавляем индексы в свой проект - 
+
+Ставим индекс на FULLTEXT на post_content,post_title ,comment_content - для ускорения полнотекстового поиска
+
+
